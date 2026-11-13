@@ -1,0 +1,21 @@
+name: 'MCP-Shield Tool-Pinning & Prompt-Injection Audit'
+description: 'Computes deterministic SHA-256 hashes of MCP tool schemas and scans descriptions for prompt-injection patterns.'
+author: 'ExactBaseline'
+branding:
+  icon: 'shield'
+  color: 'blue'
+inputs:
+  target-path:
+    description: 'Directory or MCP config JSON to scan'
+    required: false
+    default: '.'
+  fail-on-injection:
+    description: 'Exit non-zero if prompt-injection heuristics trigger'
+    required: false
+    default: 'true'
+runs:
+  using: 'composite'
+  steps:
+    - name: Run MCP-Shield Deterministic Scanner
+      shell: bash
+      run: python3 "${{ github.action_path }}/mcp_shield_scan.py" "${{ inputs.target-path }}" "${{ inputs.fail-on-injection }}"
