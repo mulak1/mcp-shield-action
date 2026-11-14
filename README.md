@@ -1,6 +1,8 @@
 # MCP-Shield GitHub Action (`mcp-shield-action`)
 
-Deterministic **SHA-256 MCP Tool-Pinning** and **Prompt-Injection CI Gate** for Model Context Protocol servers and agent repos.
+Deterministic **SHA-256 MCP Tool-Pinning** and **Regex Heuristic Linter** for Model Context Protocol config files in developer CI pipelines.
+
+> **Important Notice (`AS-IS` MIT Developer Utility)**: Provided strictly `AS-IS` without warranty of any kind. This utility performs static regex/hash linting only and is **not** a security certification, audit seal, or guarantee against vulnerabilities.
 
 ## Quickstart
 ```yaml
@@ -9,7 +11,3 @@ Deterministic **SHA-256 MCP Tool-Pinning** and **Prompt-Injection CI Gate** for 
     target-path: '.'
     fail-on-injection: 'true'
 ```
-
-## Live Cloud Deep-Audit & Hosted Proxy
-- **Per-Call x402 Base USDC API (`$0.01`–`$0.02`/call)**: `https://api.exactbaseline.com/x402/v1/mcp-audit` ([Bazaar Catalog](https://api.exactbaseline.com/x402/v1/bazaar))
-- **Managed Continuous Monitoring**: [Subscribe on Polar.sh](https://buy.polar.sh/polar_cl_rwOjs5Ghm1rAH1sckIFzKoEgvcD7Iwz7hjajA0hQuGX)
